@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Selection Sort Interactive Tutorial</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="./main.css">
+
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Selection Sort Algorithm</h1>
+      <p>Learn how Selection Sort works through interactive visualization. Watch as the algorithm finds the minimum element and places it in the correct position.</p>
+    </div>
+
+    <div class="main-content">
+      <div class="left-panel">
+        <div class="tutorial-section">
+                  <div class="tutorial-section">
+          <div class="status-bar">
+            <div class="status-item" id="currentPass">
+              <i class="fas fa-play-circle"></i>
+              <span>Pass: 0</span>
+            </div>
+            <div class="status-item" id="comparisons">
+              <i class="fas fa-exchange-alt"></i>
+              <span>Comparisons: 0</span>
+            </div>
+            <div class="status-item" id="swaps">
+              <i class="fas fa-arrows-alt-h"></i>
+              <span>Swaps: 0</span>
+            </div>
+          </div>
+
+          <div class="legend">
+            <div class="legend-item">
+              <div class="legend-color" style="background: linear-gradient(135deg, #ff6b6b, #ee5a24);"></div>
+              <span>Current Position</span>
+            </div>
+            <div class="legend-item">
+              <div class="legend-color" style="background: linear-gradient(135deg, #ffa726, #ff7043);"></div>
+              <span>Comparing</span>
+            </div>
+            <div class="legend-item">
+              <div class="legend-color" style="background: linear-gradient(135deg, #26c6da, #00acc1);"></div>
+              <span>Current Minimum</span>
+            </div>
+            <div class="legend-item">
+              <div class="legend-color" style="background: linear-gradient(135deg, #66bb6a, #43a047);"></div>
+              <span>Sorted</span>
+            </div>
+          </div>
+
+          <div class="controls">
+            <button class="btn btn-primary" onclick="startSort()">
+              <i class="fas fa-play"></i>
+              Start Sorting
+            </button>
+            <button class="btn btn-secondary" onclick="generateNewArray()">
+              <i class="fas fa-random"></i>
+              Generate New Array
+            </button>
+            <button class="btn btn-secondary" onclick="resetArray()">
+              <i class="fas fa-undo"></i>
+              Reset
+            </button>
+          </div>
+        </div>
+         <div class="complexity-info">
+            <div class="complexity-card">
+              <h4>Time Complexity</h4>
+              <div class="complexity-value">O(n²)</div>
+              <p>Always performs n²/2 comparisons</p>
+            </div>
+            <div class="complexity-card">
+              <h4>Space Complexity</h4>
+              <div class="complexity-value">O(1)</div>
+              <p>In-place sorting algorithm</p>
+            </div>
+            <div class="complexity-card">
+              <h4>Stability</h4>
+              <div class="complexity-value">Unstable</div>
+              <p>May change relative order of equal elements</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+         
+
+
+
+      <div class="right-panel">
+        
+
+        <div class="tutorial-section">
+          <div class="visualization-container">
+          <div id="boxes"></div>
+        </div>
+          <div class="steps-container">
+            
+            <h3 style="text-align: center; margin-bottom: 20px; color: #4ecdc4;">
+              <i class="fas fa-list-ol"></i> Current Step
+            </h3>
+            <div id="steps"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js">
+  </script>
+</body>
+</html>
